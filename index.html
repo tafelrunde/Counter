@@ -1,30 +1,38 @@
- 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
- "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title></title>
-<script type="text/javascript">
-var count = 0;
-function plus() {
- count = count + 1;
-    document.getElementById("p2").innerHTML = count;
-}
+<!DOCTYPE html>
+<html>
+    <!-- This code is only meant for previewing your Reflow design. -->
+    <head>
+	<link rel="stylesheet" href="boilerplate.css" />
+	<link rel="stylesheet" href="reflow.css" />
+	<meta charset="utf-8">
 
-function minus() {
- count = count - 1;
-    document.getElementById("p2").innerHTML = count;
-}
-</script>
+    <script type="text/javascript">
+      var count = 0;
+      function plus() {
+       count = count + 1;
+          document.getElementById("text2").innerHTML = count;
+      }
 
+      function minus() {
+       count = count - 1;
+          document.getElementById("text2").innerHTML = count;
+      }
+    </script>
 </head>
 <body>
-<p>
-	<a href="javascript:plus();">+</a>
-	<a href="javascript:minus();">-</a>
-</p>
 
-<p id="p2">0</p>
+	<div id="primaryContainer" class="primaryContainer clearfix">
 
-</body>
+       <p id="text1">
+         <a href="javascript:plus();" style="text-decoration: none; color: #f4f4f4">+</a>
+       </p>
+
+       <p id="text2">0</p>
+
+       <p id="text3">
+         <a href="javascript:minus();" style="text-decoration: none; color: #f4f4f4">-</a>
+       </p>
+
+	</div>
+  </body>
 </html>
