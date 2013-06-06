@@ -15,7 +15,8 @@
 
       function minus() {
        count = count - 1;
-          document.getElementById("text2").innerHTML = count;
+       document.getElementById("text2").innerHTML = count;
+       if (count==0) {count = count + 1};
       }
     </script>
 </head>
@@ -23,14 +24,14 @@
 
 	<div id="primaryContainer" class="primaryContainer clearfix">
 
-       <p id="text1">
-         <a onclick="plus();" style="text-decoration: none; color: #f4f4f4">+</a>
+       <p onclick="plus()" id="text1">
+        +
        </p>
 
        <p id="text2">0</p>
 
-       <p id="text3">
-         <a onclick="minus();" style="text-decoration: none; color: #f4f4f4">-</a>
+       <p onclick="minus()" id="text3">
+         -
        </p>
 
 	</div>
