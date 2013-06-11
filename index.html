@@ -15,7 +15,12 @@
 
       function minus() {
        count = count - 1;
-       if (count == -1) {count = count + 1};
+       if (count < 0) {count = 0};
+       document.getElementById("text2").innerHTML = count;
+      }
+
+      function reset() {
+       count = 0;
        document.getElementById("text2").innerHTML = count;
       }
     </script>
@@ -28,7 +33,7 @@
         +
        </p>
 
-       <p id="text2">0</p>
+       <p onclick="reset()" id="text2">0</p>
 
        <p onclick="minus()" id="text3">
          -
